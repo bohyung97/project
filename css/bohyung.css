@@ -1,0 +1,235 @@
+@charset "UTF-8";
+body{}
+button{
+  cursor:pointer; 
+  background: transparent;
+}
+
+
+#container{
+  position: relative;
+ 
+  max-width: 640px; min-width: 320px;
+  margin: auto;
+}
+header{
+  position:fixed; top:0; left:0; right:0;
+  max-width:640px; min-width:320px;
+  margin:auto;
+  background:#fff;
+  z-index:100; 
+  
+}
+
+/*--- logo --- */
+.logo_box{width:140px; height:50px;
+margin:15px; }
+h1{};
+h1 a{ display:block; width: 180px; height: 50px;}
+
+
+ /*----gnbBtns ---*/ 
+.gnbBtns{
+  position:absolute; top:20px; right:0px; margin-right:15px;}
+.gnbBtns button{width:45px; height: 45px;
+  cursor: pointer;
+  background: #fff;
+  border: radius 15%;
+  box-shadow:0 2px 6px rgba(0,0,0,0.5)
+}  
+.gnbBtns button span{
+  position: absolute; width: 35px; height: 2px;
+  background: #000;
+  margin-left: -17px;
+}  
+.gnbBtns button strong{display: none;}
+
+
+.gnbBtns button span:before,
+.gnbBtns button span:after{
+  position:absolute;
+  content:'';
+  width: 35px; height: 2px;
+  background: #000;
+  left: 0;
+}
+.gnbBtns button span:before{top:10px;}
+.gnbBtns button span:after{top:-10px;}
+
+/*---gnbBtns->gnblist ----*/
+.dark { display:none; position:fixed; background:rgba(0,0,0,.8); z-index:101; 
+  inset:0; 
+  }
+
+
+.gnb{
+  position: fixed;
+  top:0; right:0; bottom:0;
+  width:300px;
+  background-color: #fff;
+  z-index: 200;
+  transform:translateX(100%);
+  transition:all 0.3s ease-in;
+}
+.gnb .inner{
+  height: 100%;
+  width: 300px; border: 1px solid transparent;}
+.gnb_header{
+  display:flex; justify-content: space-around; align-items: center;
+  padding: 40px 10px;;
+}
+.gnb.header>a
+{}
+.gnb.header>a>img{}
+
+.list_menu{padding:10px 0;}
+.list_menu li{}
+.list_menu li >a {
+  display:block; 
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.list_submenu{
+  height:0; text-align: center;
+  overflow: hidden;
+  transition:0.3s ease-in;}
+
+.gnb_banner{}
+.gnb_banner> a{display: block; width: 280px; border-radius: 30px; overflow: hidden;}
+.gng_banne img{width:300px; }
+
+.gnb_lock{ 
+  display: block; text-align: center;
+  padding:32px 0;
+}
+.lock{font-size: 30px;
+ }
+.line{
+  border-bottom:1px solid #ddd;
+}
+
+.slider_text{
+  padding: 20px 10px;
+}
+.text1{
+  display: inline;
+  font-size: 30px;
+  font-weight: 900;
+}
+.text2{
+  font-weight: 800;
+  color: #149EBB;
+}
+.text2_1{
+  font-weight: 800;
+  color: #4FC0A0
+}
+.text2_2{
+  font-weight: 800;
+  color: #A6998E
+}
+.text3{
+  margin: 20px 0px;
+  font-weight: 800;
+}
+
+
+/*---nav--- */
+
+.swiper{width: 100%; height: 500px;}
+.swiper img{
+   width:100%;
+}
+.visual_text{
+  position: absolute;
+  width:100%; height: 100px;
+  background-color: rgb(238, 232, 232);}
+
+/*---Main_nav---*/
+.Main_nav{
+  margin: 50px 0px}
+.Main_nav_textbox{
+  width:100%; height: 100px;
+  margin: 0; background: #cec1c1;
+  display:flex;
+  align-items: center;
+}
+.textbox1{ height: 40px;}
+.Main_nav_wrap{
+  display:grid;
+  height:300px;
+  
+  grid-template-columns:1fr 1fr;
+  gap: 10px;
+}
+.Main_nav_wrap >div > a> img{
+  width: 100%;
+  height:100%
+}
+.list_00{grid: 1;}
+.list_01{grid: 1;}
+.list_02{grid: 1;}
+.list_03{grid: 1;}
+
+.Main_nav_wrap >div > a> img:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/*---footer---*/
+footer{
+  position: relative;
+  display: block;
+}
+.footer_background{padding: 300px 20px 20px;}
+.footer_background >p{}
+.footer_background .logo{
+  width: 140px; margin-bottom:20px;
+}
+.footer_background .logo img {
+  width:100%}
+.footer_background .copy{
+  font-size: 16px;
+  margin-bottom:30px; }
+.footer_background .menu-list{width:320px;
+  padding:0;}
+.footer_background .menu-list >li{
+  list-style: none;
+  display:inline;
+  margin: 0 10px;
+ 
+}
+.footer_background .menu-list a{
+}
+.footer_background .menu-list li:last-child{
+  font-family: 'Noto Sans KR', sans-serif;
+  
+  font-weight: 600;
+  color:black ;
+}
+
+.scrollTop{
+  position: absolute;
+  right: 14px;
+  bottom: 30px;
+  display: block;
+  width: 40px; height: 40px;;
+}
+.scrollTop>span{
+  display:block;
+  width:22px; height:22px;
+  border:2px solid black;
+  transform:rotate(-45deg);
+  border-bottom: none;
+  border-left: none;
+  font-size: 0;
+  margin-top: 12px;
+  transition: 200ms;
+}
+.scrollTop:hover span{
+  border-color: red;
+  margin-top:8px;
+}
